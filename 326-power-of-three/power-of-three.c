@@ -5,5 +5,13 @@ bool isPowerOfThree(int n) {
         return false;
     }
 
-    return 1162261467 % n == 0;
+    while (n % 3 == 0) {
+        n = n / 3;
+    }
+
+    if (n == 1) {
+        return true;
+    }
+
+    return false;
 }
